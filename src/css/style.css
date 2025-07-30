@@ -1,0 +1,175 @@
+body {
+  font-family: "Bebas Neue", sans-serif;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.carrossel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.informacoes {
+  display: none;
+}
+
+.informacoes.ativa {
+  display: block;
+}
+
+.conteudo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  min-height: 100vh;
+}
+
+.informacoes h1 {
+  font-size: 35px;
+  margin-bottom: 80px;
+  font-family: "CollegiateFLF";
+  letter-spacing: 8px;
+}
+
+.midoriya {
+  color:#00ffff;
+  text-shadow: 0 0 30px #00ff00;
+}
+
+.bakugou {
+ color:#ff4500;
+ text-shadow: 0 0 30px #ff4500;
+}
+
+.todoroki {
+  position:static;
+  color: #fff;
+}
+
+.gelo {
+  
+  background-image: linear-gradient(to right,
+  #e0f2f7 0%,
+  #b3e5fc 33%,
+  #81d4fa 66%,
+  #4fc3f7 100%
+);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+.fogo {
+  background: linear-gradient(to right,
+    #ffeb3b 0%,
+    #ffc107 33%,
+    #ff9800 66%,
+    #d32f2f 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.red-riot {
+  background: linear-gradient(to right, #e60000, #ff4d4d, #e60000);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.all-might {
+  background: linear-gradient(to right, #0038a8, #ffd700, #0038a8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.endeavor {
+  background: linear-gradient(to right, #ff4500, #ffcc00, #ff4500);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.hawks {
+  background: linear-gradient(to right, #8b0000, #e6b800, #8b0000);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+@font-face {
+  font-family: "CollegiateFLF";
+  src: url(../fonts/CollegiateFLF.ttf);
+}
+
+.informacoes .descricao {
+  width: 49%;
+  font-size: 24px;
+  color: #ffffff;
+  line-height: 40px;
+  height: 300px;
+    overflow: auto;
+    padding-right: 15px;
+}
+
+.botoes-carrossel {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.botoes-carrossel .botao {
+    background-color: #ffffff;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+    border-color: #ffffff;
+}
+
+.botoes-carrossel .botao.selecionado {
+    background-color: #1d8346;
+   
+}
+
+.imagem {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    display: none;
+}
+
+.imagem.ativa {
+    display: block;
+    animation: mudarImagem 0.7s;
+}
+
+@keyframes mudarImagem {
+    from {
+        opacity: 0.85;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+main::after {
+    content: "";
+    min-height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(120deg, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 0.05926120448179273) 50%, rgba(0, 0, 0, 1) 90%);
+    z-index: -1;
+}
